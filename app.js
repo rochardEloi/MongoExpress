@@ -3,7 +3,13 @@ const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
 const Thing = require("./models/thing");
 const app = express();
-mongoose.connect('mongodb+srv://rochard_database:g9u2C3kz0zltVDTd@cluster0-ravbf.azure.mongodb.net/test?retryWrites=true&w=majority', {
+/* mongoose.connect('mongodb+srv://rochard_database:127.0.0.1:27017/?gssapiServiceName=mongodb', {
+        useNewUrlParser: true,
+        useUnifiedTopology: true
+    })
+    .then(() => console.log('Connexion à MongoDB réussie !'))
+    .catch(() => console.log('Connexion à MongoDB échouée !')); */
+mongoose.connect('mongodb://127.0.0.1:27017/rochard_database', {
         useNewUrlParser: true,
         useUnifiedTopology: true
     })

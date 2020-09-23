@@ -1,8 +1,5 @@
 const Thing = require("../models/thing");
 exports.createThing = (req, res, next) => {
-    let name = req.body;
-    console.log(name.title);
-    console.log(req.body);
     delete req.body._id;
     const thing = new Thing({
         //title : name.title;

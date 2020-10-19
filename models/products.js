@@ -6,7 +6,7 @@ const productShema = mongoose.Schema({
     imageUrl: { type: String, required: true },
     userId: { type: String, required: true },
     price: { type: Number, required: true },
-    reviews: [ {type:String, required:true}]
+    reviews: [{type:String, required:true}]
 });
 
 module.exports = mongoose.model('products', productShema);

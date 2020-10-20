@@ -5,6 +5,7 @@ const stuffRoutes = require("./routes/stuff");
 const userRoutes = require("./routes/user");
 const userProducts = require("./routes/products");
 const faireUnCommande = require("./routes/achat");
+const livraisonService = require("./routes/livraison");
 const app = express();
 /* mongoose.connect('mongodb+srv://rochard_database:127.0.0.1:27017/?gssapiServiceName=mongodb', {
         useNewUrlParser: true,
@@ -30,4 +31,5 @@ app.use("/api/stuff", stuffRoutes);
 app.use("/api/auth", userRoutes);
 app.use("/products", userProducts);
 app.use("/commande", faireUnCommande);
+app.use("/livraison", livraisonService);
 module.exports = app;

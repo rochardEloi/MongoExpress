@@ -28,3 +28,10 @@ exports.updateLivraison = (req,res,next) =>{
     .then(livraison => res.status("200").json(livraison))
     .catch(error => res.status("400").json(error));
 }
+
+exports.deleteLivraison = (req, res, next) => {
+    Livraison.deleteOne({ _id: req.params.id })
+        .then(() => res.status('200').json({ message: "OK" }))
+        .catch(error => res.status('400').json(error))
+
+}
